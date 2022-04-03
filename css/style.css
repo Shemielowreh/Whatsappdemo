@@ -1,0 +1,212 @@
+ /* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}  */
+
+/* html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+} */
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header{
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    height: 3rem;
+}
+
+.hamburger {
+    display: none;
+}
+
+.accordion {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.nav-item {
+    margin-left: 1rem;
+}
+
+.nav-link{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: red;
+}
+
+.nav-bar {
+    width: 100%;
+}
+
+.nav-link:hover{
+    color: blue;
+    transition: 0.5s;
+}
+
+.nav-logo {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #000;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 8.6%;
+        margin-left: 0 !important;
+        padding: 0;
+        background-color: #e0e0e0;
+        width: 70%;
+        text-align: center;
+        -webkit-transition: 1.3s;
+                transition: 1.3s;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-link {
+        display: block;
+    }
+
+    .nav-item {
+        margin: 1.5rem;
+        display: none;
+        margin-left: 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    button:hover {
+        cursor: pointer;
+    }
+
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .hamburger.active .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+            
+        }
+
+    .accordion {
+        position: relative;
+        display: block;
+        width: 100%;
+    }
+
+    .accordion-item {
+        display: block;
+    }
+
+    .accordion .accordion-content {
+        display: block;
+        padding: 0;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s ease, padding 0.3s linear;
+    }
+
+    .accordion .accordion-content p {
+        padding: 7px;
+        margin: 0;
+    }
+
+    .accordion .accordion-content p:hover {
+        cursor: pointer;
+        color: blue;
+        transition: 0.6s ease;
+    }
+
+    .height {
+        height: 100px !important;
+    }
+
+    .accordion .accordion-title {
+        position: relative;
+        display: block;
+        margin: 0;
+        padding: 10px;
+        width: 100%;
+        font-size: 1m;
+        outline: none;
+        box-sizing: border-box;
+        background: #00b3b4;
+        color: white;
+        border: solid 1px #379aa4;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset,
+                    0 -1px 0 rgba(255, 255, 255, 0.1) inset,
+                    0 4px 0 #338a94,
+                    0 4px 2px rgba(0,0,0,0.5);
+    }
+
+    .accordion .accordion-title:hover {
+        background-color: #0bbfc0;
+    }
+
+    .accordion .accordion-title::before {
+        position: absolute;
+        content: "";
+        top: calc(50% - 5px); 
+        right: 20px;
+        width: 7px;
+        height: 7px;
+        cursor: pointer;
+        border-left: solid 2px white;
+        border-bottom: solid 2px white;
+        transform: rotate(-45deg);
+    }       
+
+    /* .accordion .accordion-title::after {
+        position: absolute;
+        content: "";
+        top: calc(50% - 5px); 
+        right: 20px;
+        width: 7px;
+        height: 7px;
+        cursor: pointer;
+        border-left: solid 2px white;
+        border-bottom: solid 2px white;
+        transform: rotate(135deg);
+    }        */
+}    
